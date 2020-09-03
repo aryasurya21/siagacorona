@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">SiagaCorona</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="positive_label">36977</string>
+    <string name="positive_heading">Positive</string>
+    <string name="recovered_count">45401</string>
+    <string name="recovered_heading">Recovered</string>
+    <string name="death_heading">Death</string>
+    <string name="death_count">4143</string>
+    <string name="know_more_heading">Get to Know More</string>
+    <string name="detail_heading">See details by province all over Indoensia</string>
+    <string name="look_up_headiing">Look up</string>
+    <string name="hotline_label">Hotline</string>
+    <string name="emergency_heading">Check emergency number to contact</string>
+    <string name="corona_label">corona</string>
+    <string name="indo_label">INDONESIA</string>
+    <string name="info_icon">info</string>
+    <string name="total_case_count">86521</string>
+    <string name="globe_image">globe</string>
+    <string name="arrow_right">arrow_right</string>
+    <string name="sirine">sirine</string>
 </resources>

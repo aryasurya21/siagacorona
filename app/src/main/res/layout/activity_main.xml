@@ -19,7 +19,7 @@
         android:fontFamily="@font/rubik_bold"
         android:textSize="20sp"
         android:layout_marginTop="8dp"
-        android:text="INDONESIA"
+        android:text="@string/indo_label"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +27,7 @@
 
 
     <ImageView
+        android:contentDescription="@string/info_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/ic_info"
@@ -53,6 +54,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:contentDescription="@string/corona_label"
             android:layout_weight="0.4"
             android:id="@+id/covid_logo"
             android:layout_width="120dp"
@@ -76,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_bold"
-                android:text="86521"
+                android:text="@string/total_case_count"
 
                 android:textColor="@android:color/white"
                 android:textSize="42sp"
@@ -88,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/karla"
-                android:text="Total Cases"
+                android:text="@string/total_cases"
                 android:textColor="@android:color/white"
                 app:layout_constraintEnd_toEndOf="@+id/covid_total"
                 app:layout_constraintStart_toStartOf="@+id/covid_total"
@@ -112,6 +114,7 @@
 
 
         <LinearLayout
+            android:baselineAligned="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -136,7 +139,7 @@
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="36977"
+                    android:text="@string/positive_label"
                     android:textAlignment="center" />
 
                 <TextView
@@ -145,7 +148,7 @@
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Positive"
+                    android:text="@string/positive_heading"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -164,7 +167,7 @@
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="45401"
+                    android:text="@string/recovered_count"
                     android:textAlignment="center" />
 
 
@@ -174,7 +177,7 @@
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Recovered"
+                    android:text="@string/recovered_heading"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -195,7 +198,7 @@
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="4143"
+                    android:text="@string/death_count"
                     android:textAlignment="center" />
 
                 <TextView
@@ -204,7 +207,7 @@
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Death"
+                    android:text="@string/death_heading"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -216,7 +219,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
-            android:text="Get to Know More"
+            android:text="@string/know_more_heading"
             android:fontFamily="@font/rubik_bold"
             android:textSize="18sp"
             android:textColor="#25287A" />
@@ -233,6 +236,7 @@
             android:weightSum="3">
 
             <ImageView
+                android:contentDescription="@string/globe_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -252,16 +256,17 @@
                     android:fontFamily="@font/rubik_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Look up" />
+                    android:text="@string/look_up_headiing" />
 
                 <TextView
                     android:textColor="#71728C"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="See details by province all over Indoensia" />
+                    android:text="@string/detail_heading" />
             </LinearLayout>
 
             <ImageView
+                android:contentDescription="@string/arrow_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -281,6 +286,7 @@
             android:weightSum="3">
 
             <ImageView
+                android:contentDescription="@string/sirine"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -300,16 +306,17 @@
                     android:fontFamily="@font/rubik_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hotline" />
+                    android:text="@string/hotline_label" />
 
                 <TextView
                     android:textColor="#71728C"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Check emergency number to contact" />
+                    android:text="@string/emergency_heading" />
             </LinearLayout>
 
             <ImageView
+                android:contentDescription="@string/arrow_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
