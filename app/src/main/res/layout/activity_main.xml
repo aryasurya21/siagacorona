@@ -9,7 +9,7 @@
     android:elevation="3dp"
     android:layout_height="match_parent"
     android:background="#3E419E"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
 
     <TextView
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_bold"
-                android:text="@string/total_case_count"
+                android:text="@string/loading"
 
                 android:textColor="@android:color/white"
                 android:textSize="42sp"
@@ -134,12 +134,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_positive_case"
                     android:fontFamily="@font/rubik_bold"
                     android:textSize="18sp"
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/positive_label"
+                    android:text="@string/loading"
                     android:textAlignment="center" />
 
                 <TextView
@@ -162,12 +163,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_recovered_case"
                     android:fontFamily="@font/rubik_bold"
                     android:textSize="18sp"
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/recovered_count"
+                    android:text="@string/loading"
                     android:textAlignment="center" />
 
 
@@ -193,12 +195,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_death_case"
                     android:fontFamily="@font/rubik_bold"
                     android:textSize="18sp"
                     android:textColor="#FFFFFF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/death_count"
+                    android:text="@string/loading"
                     android:textAlignment="center" />
 
                 <TextView
@@ -225,6 +228,7 @@
             android:textColor="#25287A" />
 
         <LinearLayout
+            android:id="@+id/lookup_view"
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
@@ -275,6 +279,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/hotline_view"
             android:backgroundTint="#EEEEFF"
             android:layout_width="350dp"
             android:layout_height="100dp"

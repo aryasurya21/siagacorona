@@ -5,4 +5,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="white">#FFFFFF</color>
     <color name="grey">#808080</color>
+    <color name="lightgrey">#F1F1F1</color>
+    <color name="indigo">#3E419E</color>
+    <color name="indigo2">#25287A</color>
+    <color name="green">#68C166</color>
+    <color name="teal">#52B2D0</color>
+    <color name="redish">#E76666</color>
 </resources>
