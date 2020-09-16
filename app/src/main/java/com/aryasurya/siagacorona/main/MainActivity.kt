@@ -1,15 +1,18 @@
 package com.aryasurya.siagacorona.main
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.preference.PreferenceManager
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.aryasurya.siagacorona.R
+import com.aryasurya.siagacorona.about.ui.AboutFragment
 import com.aryasurya.siagacorona.hotline.ui.HotlineFragment
 import com.aryasurya.siagacorona.lookup.ui.LookupActivity
 import com.aryasurya.siagacorona.main.model.CovidCaseModel
@@ -18,6 +21,7 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.*
 import java.io.IOException
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -31,6 +35,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         lookup_view.setOnClickListener(this)
         hotline_view.setOnClickListener(this)
+        about_dialog.setOnClickListener(this)
         this.title = "Home"
         this.preferences = getSharedPreferences(preferenceName, Context.MODE_PRIVATE)
         if(!this.preferences.contains("total")){
@@ -47,6 +52,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when(v) {
             lookup_view -> navigateTo(LookupActivity())
             hotline_view -> showBottomSheet()
+            about_dialog -> showAboutDialog()
         }
     }
 
@@ -56,7 +62,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             .enqueue(populateData())
     }
 
-    private fun setDataLocally(totalCases: String, recovered: String, positive: String, death: String){
+    private fun setDataLocally(
+        totalCases: String,
+        recovered: String,
+        positive: String,
+        death: String
+    ){
         val editor = this.preferences.edit()
         editor.putString("total", totalCases)
         editor.putString("recovered", recovered)
@@ -69,7 +80,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             return object: Callback {
                 override fun onFailure(call: Call, e: IOException) {
                     this@MainActivity.runOnUiThread {
-                        Toast.makeText(this@MainActivity,e.message.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, e.message.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
 
@@ -86,10 +97,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                             tv_positive_case.text = data[0].positiveCase
                             tv_death_case.text = data[0].deathCase
                         }
-                        this@MainActivity.setDataLocally(data[0].totalCases, data[0].recoveredCase, data[0].positiveCase, data[0].deathCase)
+                        this@MainActivity.setDataLocally(
+                            data[0].totalCases,
+                            data[0].recoveredCase,
+                            data[0].positiveCase,
+                            data[0].deathCase
+                        )
                     } catch (e: Exception){
                         this@MainActivity?.runOnUiThread {
-                            Toast.makeText(this@MainActivity,e.message.toString(), Toast.LENGTH_LONG).show()
+                            Toast.makeText(
+                                this@MainActivity,
+                                e.message.toString(),
+                                Toast.LENGTH_LONG
+                            ).show()
                         }
                     }
                 }
@@ -104,5 +124,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun navigateTo(activity: Activity){
         val intent = Intent(this, activity::class.java)
         startActivity(intent)
+    }
+
+    private fun showAboutDialog(){
+        val aboutDialog = AboutFragment()
+        aboutDialog.show(supportFragmentManager, "aboutFragment")
     }
 }

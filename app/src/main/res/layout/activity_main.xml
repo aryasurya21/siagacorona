@@ -27,6 +27,7 @@
 
 
     <ImageView
+        android:id="@+id/about_dialog"
         android:contentDescription="@string/info_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
