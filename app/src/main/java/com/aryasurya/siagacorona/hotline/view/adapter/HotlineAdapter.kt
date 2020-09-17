@@ -1,4 +1,4 @@
-package com.aryasurya.siagacorona.hotline.adapter
+package com.aryasurya.siagacorona.hotline.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

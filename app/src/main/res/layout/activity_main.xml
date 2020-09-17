@@ -9,7 +9,7 @@
     android:elevation="3dp"
     android:layout_height="match_parent"
     android:background="#3E419E"
-    tools:context=".main.MainActivity">
+    tools:context=".main.view.MainActivity">
 
 
     <TextView

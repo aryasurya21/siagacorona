@@ -1,4 +1,4 @@
-package com.aryasurya.siagacorona.lookup.adapter
+package com.aryasurya.siagacorona.lookup.view.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 
-        <activity android:name=".lookup.ui.LookupActivity" android:parentActivityName=".main.MainActivity" />
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".lookup.view.LookupActivity" android:parentActivityName=".main.view.MainActivity" />
+        <activity android:name=".main.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

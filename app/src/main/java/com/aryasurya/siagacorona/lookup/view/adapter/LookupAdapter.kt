@@ -1,11 +1,9 @@
-package com.aryasurya.siagacorona.lookup.adapter
+package com.aryasurya.siagacorona.lookup.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.aryasurya.siagacorona.R
-import com.aryasurya.siagacorona.hotline.model.HotlineModel
 import com.aryasurya.siagacorona.lookup.model.LookupModel
 
 class LookupAdapter(private var items: MutableList<LookupModel>): RecyclerView.Adapter<LookupViewHolder>() {
