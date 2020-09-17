@@ -25,7 +25,7 @@ class MainRepository {
             }
     }
 
-    public fun getCovidStatistic(): MutableLiveData<CovidCaseModel> {
+    fun getCovidStatistic(): MutableLiveData<CovidCaseModel> {
         var data = MutableLiveData<CovidCaseModel>()
 
         val request = Request.Builder()
@@ -44,9 +44,9 @@ class MainRepository {
                         val jsonData = response.body?.string()
                         val covidCaseType = object : TypeToken<Array<CovidCaseModel>>(){}.type
 
-                        val statiscs: Array<CovidCaseModel> = gson.fromJson(jsonData, covidCaseType)
+                        val statistics: Array<CovidCaseModel> = gson.fromJson(jsonData, covidCaseType)
 
-                        data.postValue(statiscs[0])
+                        data.postValue(statistics[0])
                     } catch (e: Exception) {
                         data.postValue(null)
                     }

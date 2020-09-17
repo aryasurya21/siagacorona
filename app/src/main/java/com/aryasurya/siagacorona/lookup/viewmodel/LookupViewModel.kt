@@ -26,7 +26,7 @@ class LookupViewModel: ViewModel(){
             }
     }
 
-    public fun init(){
+    fun init(){
         if(lookupList.value != null){
             return
         }
@@ -34,7 +34,7 @@ class LookupViewModel: ViewModel(){
         this.lookupList = this.lookupRepository.getLookupData()
     }
 
-    public fun getLookUpData(): LiveData<List<LookupModel>> {
+    fun getLookUpData(): LiveData<List<LookupModel>> {
         return this.lookupList
     }
 }
